@@ -13,7 +13,7 @@ Check the <a href="https://youtu.be/-VcF9gOBcnM">YouTube Video</a> for a detaile
 
 ## How to install?
 
-On GitHub got to <a href="https://github.com/DotNetMax/Photizer/releases/tag/1.0.0.5">latest relase</a> page. Just download the Photizer.zip file and extract it anywhere on your computer. 
+On GitHub got to <a href="https://github.com/DotNetMax/Photizer/releases/latest">latest relase</a> page. Just download the Photizer.zip file and extract it anywhere on your computer. 
 <br>
 
 Right now Photizer runs only on Windows. Linux and MacOS support is planned for the future.
