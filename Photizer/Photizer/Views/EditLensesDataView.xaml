@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Photizer.Views.EditLensesDataView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Photizer.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:resx="clr-namespace:Photizer"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <materialDesign:DialogHost Identifier="RootDialog">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1">
+                <Button Style="{StaticResource MaterialDesignIconButton}"
+                ToolTip="MaterialDesignIconButton"
+                Margin="15"
+                x:Name="RefreshLenses"
+                Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
+                    <materialDesign:PackIcon Kind="Refresh" />
+                </Button>
+                <Button Style="{StaticResource MaterialDesignIconButton}"
+                ToolTip="MaterialDesignIconButton"
+                Margin="15"
+                    Command="{Binding OpenAddNewLenseDialogCommand}"
+                Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
+                    <materialDesign:PackIcon Kind="Plus" />
+                </Button>
+                <Button Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Margin="15"
+                    x:Name="DeleteLense"
+                    Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
+                    <materialDesign:PackIcon Kind="Delete" />
+                </Button>
+            </StackPanel>
+
+            <ListBox x:Name="Lenses" Margin="10">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBox FontSize="26" Margin="5" Text="{Binding Path=Name}"
+                                 cal:Message.Attach="[Event KeyDown] = [Action SaveChanges($eventArgs, $dataContext, $source)]"></TextBox>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </materialDesign:DialogHost>
+</UserControl>

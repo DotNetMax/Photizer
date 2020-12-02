@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Photizer.Views.EditDataView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Photizer.Views"
+             mc:Ignorable="d"
+             xmlns:resx="clr-namespace:Photizer"
+             xmlns:cal="http://www.caliburnproject.org"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="NavigateToEditLocations"
+                    Grid.Column="0"
+                    Content="{x:Static resx:Multilang.EditData_EditLocations}"
+                    Margin="5"></Button>
+            <Button x:Name="NavigateToEditCategories"
+                    Grid.Column="1"
+                    Content="{x:Static resx:Multilang.EditData_EditCategories}"
+                    Margin="5"></Button>
+            <Button x:Name="NavigateToEditTags"
+                    Grid.Column="2"
+                    Content="{x:Static resx:Multilang.EditData_EditTags}"
+                    Margin="5"></Button>
+            <Button x:Name="NavigateToEditPeople"
+                    Grid.Column="3"
+                    Content="{x:Static resx:Multilang.EditData_EditPeople}"
+                    Margin="5"></Button>
+            <Button x:Name="NavigateToEditCameras"
+                    Grid.Column="4"
+                    Content="{x:Static resx:Multilang.EditData_EditCameras}"
+                    Margin="5"></Button>
+            <Button x:Name="NavigateToEditLenses"
+                    Grid.Column="5"
+                    Content="{x:Static resx:Multilang.EditData_EditLenses}"
+                    Margin="5"></Button>
+        </Grid>
+        <ContentControl Grid.Row="1"
+                        cal:View.Model="{Binding ActiveItem}">
+        </ContentControl>
+    </Grid>
+</UserControl>

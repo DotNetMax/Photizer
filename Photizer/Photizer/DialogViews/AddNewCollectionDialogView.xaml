@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Photizer.DialogViews.AddNewCollectionDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Photizer.DialogViews"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d"
+             xmlns:resx="clr-namespace:Photizer"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                 materialDesign:HintAssist.Hint="{x:Static resx:Multilang.AddNewCollectionDialog_CollectionName}"
+                 Margin="0 6 0 0"
+                 FontSize="18"
+                 Grid.Row="0">
+        </TextBox>
+        <TextBlock Grid.Row="1"
+                   Margin="10"
+                   Text="{Binding Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+        </TextBlock>
+        <Grid Margin="10"
+              Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button IsDefault="True"
+                    Grid.Column="0"
+                    Content="{x:Static resx:Multilang.AddDataDialog_Add}"
+                    HorizontalAlignment="Left"
+                    cal:Message.Attach="[Event Click] = [Action AddData]"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+            </Button>
+            <Button IsCancel="True"
+                    Grid.Column="1"
+                    Content="{x:Static resx:Multilang.AddDataDialog_FinishCancel}"
+                    HorizontalAlignment="Right"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>False</system:Boolean>
+                </Button.CommandParameter>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

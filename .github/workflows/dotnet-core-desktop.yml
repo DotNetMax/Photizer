@@ -1,0 +1,92 @@
+name: .NET Core Desktop
+
+on:
+    push:
+        tags:
+            - '*'
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        channel: [Release]
+        targetplatform: [x64]
+        include:
+            - channel: Release
+              ChannelName: Release
+              Configuration: Release
+              AppName: Photizer
+
+    runs-on: windows-latest  
+
+    env:
+      App_Packages_Archive: Photizer.zip
+      App_Packages_Directory: .\Photizer
+      Solution_Path: .\Photizer\Photizer.sln
+      PhotizerPath: .\Photizer\Photizer\Photizer.csproj
+      UpdaterPath: .\Photizer\Photizer.Updater\Photizer.Updater.csproj
+      PhotizerPublishProfile: .\Photizer\Photizer\Properties\PublishProfiles\SelfContainedWin64SingleFile.pubxml
+      UpdaterPublishProfile: .\Photizer\Photizer.Updater\Properties\PublishProfiles\FolderProfile.pubxml
+      PhotizerOutputDirectory: .\Photizer\Photizer\bin\Release\netcoreapp3.1\publish
+      UpdaterOutputDirectory: .\Photizer\Photizer.Updater\bin\Release\netcoreapp3.1\publish
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: 'master'
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+
+    # Add  MsBuild to the PATH: https://github.com/microsoft/setup-msbuild
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    # Restore the application
+    - name:  Restore the Wpf application
+      run: msbuild $env:Solution_Path /t:Restore /p:Configuration=$env:Configuration /p:RuntimeIdentifier=$env:RuntimeIdentifier
+      env:
+        Configuration: ${{ matrix.Configuration }}
+        RuntimeIdentifier: win-${{ matrix.targetplatform }}
+
+    # Publish the WPF App
+    - name: Publish Photizer
+      run: dotnet publish $env:PhotizerPath /p:PublishProfile=$env:PhotizerPublishProfile
+
+    # Publish the WPF App
+    - name: Publish Photizer Updater
+      run: dotnet publish $env:UpdaterPath /p:PublishProfile=$env:UpdaterPublishProfile
+
+    # Archive the package
+    - name: Create archive
+      run: Compress-Archive -Path $env:PhotizerOutputDirectory\*,$env:UpdaterOutputDirectory\* -DestinationPath $env:App_Packages_Directory\$env:App_Packages_Archive
+
+    # Create the release:  https://github.com/actions/create-release
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref}}
+        release_name: ${{ matrix.AppName }} ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    # Upload release asset:   https://github.com/actions/upload-release-asset
+    - name: Update release asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+        asset_path: ${{ env.App_Packages_Directory }}\${{ env.App_Packages_Archive }}
+        asset_name: ${{ env.App_Packages_Archive }}
+        asset_content_type: application/zip

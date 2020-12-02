@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-accent-color: #b8cec0;
+    --section-title-color-dark: #679b9b;
+    --body-color: #679b9b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    font-weight: 800;
+}
+
+.btn-white {
+    border: 2px solid #ffffff;
+    border-radius: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: none;
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.btn-white:hover {
+    background-color: #ffffff;
+    color: var(--main-accent-color)
+}
+
+/* Section title */
+
+.section-title {
+    position: relative;
+}
+
+h2.section-title-heading {
+    color: var(--section-title-color-dark);
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid var(--main-accent-color);
+    width: 8%;
+    top: 80px;
+}
+
+.section-title:hover::after {
+    width: 12%;
+    transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+}
+
+/* Navigation */
+
+.navbar {
+    padding-top: 1.2rem;
+}
+
+.navbar img {
+    height: 70px;
+    width: 300px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .85rem;
+    margin-left: 1.2rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--section-title-color-dark)
+}
+
+.navbar.active {
+    background-color: var(--section-title-color-dark);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 1);
+}
+
+
+/* Hero Section */
+
+#hero {
+    background-image: linear-gradient(to right, rgba(103,155,155, 0.62), rgba(184,206,192, 0.52)), url('../Images/hero-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    background-color: #fafafa;
+    width: 100%;
+    height: 15%;
+    transform: skewY(-2deg);
+    transform-origin: bottom right;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.main-hero-content h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .11rem;
+}
+
+.main-hero-content p {
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    font-size: 1.3rem;    
+}
+
+.main-hero-content p a {
+    color: var(--main-accent-color);
+}
+
+.image-box img {
+    position: absolute;
+    top: 75%;  
+    left: 40%;
+    right: 10%;
+    z-index: 1;
+}
+
+.flipped {
+    transform: scaleX(-1);
+}
+
+
+/* features */
+
+#features {
+    background-color: #fafafa;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#features .feature-block {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 30%;
+}
+
+#features .feature-block h3 {
+    color: var(--section-title-color-dark);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#features .feature-block p {
+    color: var(--body-color);
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+#features .feature-image {
+    display: block;
+    padding: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#features p a {
+    color: var(--main-accent-color);
+}
+/* download */
+
+#download {
+    background-image: linear-gradient(to right, rgba(103,155,155, 0.62), rgba(184,206,192, 0.52)), url('../Images/hero-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+#download .download-title h2 {
+    padding-top: 6rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+#download .download-title p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-top: 2rem;
+}
+
+#download .download-title .download-btns {
+    margin-top: 4rem;
+}
+
+#download .download-title .download-btns a:hover {
+    background-color: #ffffff;
+    color: var(--main-accent-color);
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+#download p a {
+    color: #ffffff;
+}
+
+/* support */
+
+#support {
+    background-color: #fafafa;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
+#support .support-title h2 {
+    padding-top: 6rem;
+    color: var(--section-title-color-dark);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+#support .support-title p {
+    color: var(--section-title-color-dark);
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-top: 2rem;
+}
+
+#support .download-title .download-btns {
+    margin-top: 4rem;
+}
+
+#support .download-title .download-btns a:hover {
+    background-color: #ffffff;
+    color: var(--main-accent-color);
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+#download p a {
+    color: #ffffff;
+}
+
+
+
+/* footer */
+
+#footer {
+    background-color: #2b323f;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+#footer .footer-logo img {
+    margin-top: -4.5rem;
+}
+
+#footer .social-icons {
+    margin-top: -1rem;
+}
+
+#footer .social-icons a {
+    margin-right: 10px;
+    color: #8d8c8c;
+}
+
+.copyright p {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+}

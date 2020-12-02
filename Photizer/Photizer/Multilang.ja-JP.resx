@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainMenu.Pictures" xml:space="preserve">
+    <value>写真</value>
+  </data>
+  <data name="MainMenu.AddPictures" xml:space="preserve">
+    <value>写真を追加する</value>
+  </data>
+  <data name="MainMenu.Collections" xml:space="preserve">
+    <value>コレクション</value>
+  </data>
+  <data name="MainMenu.EditData" xml:space="preserve">
+    <value>データを編集する</value>
+  </data>
+  <data name="MainMenu.Map" xml:space="preserve">
+    <value>地図</value>
+  </data>
+  <data name="MainMenu.Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="AddDataDialog.Add" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="AddDataDialog.FinishCancel" xml:space="preserve">
+    <value>終了する/キャンセル</value>
+  </data>
+  <data name="AddNewCollectionDialog.CollectionName" xml:space="preserve">
+    <value>アルバム名</value>
+  </data>
+  <data name="AddNewLocationDialog.Country" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="AddNewLocationDialog.Place" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="AddNewPersonDialog.Firstname" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="AddNewPersonDialog.Lastname" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="AddPicture.AddPerson" xml:space="preserve">
+    <value>人物を追加</value>
+  </data>
+  <data name="AddPicture.CreatedDate" xml:space="preserve">
+    <value>撮影日</value>
+  </data>
+  <data name="AddPicture.CreatedTime" xml:space="preserve">
+    <value>撮影された時間</value>
+  </data>
+  <data name="AddPicture.CreateNewLocation" xml:space="preserve">
+    <value>新しい場所を作成</value>
+  </data>
+  <data name="AddPicture.CreateNewPerson" xml:space="preserve">
+    <value>新しい人物を作成</value>
+  </data>
+  <data name="AddPicture.Rating" xml:space="preserve">
+    <value>評価</value>
+  </data>
+  <data name="AddPicture.Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="AddPicture.SelectCountry" xml:space="preserve">
+    <value>国を選択</value>
+  </data>
+  <data name="AddPicture.SelectImages" xml:space="preserve">
+    <value>写真を選択</value>
+  </data>
+  <data name="AddPicture.SelectOrAddCamera" xml:space="preserve">
+    <value>カメラを選択または追加</value>
+  </data>
+  <data name="AddPicture.SelectOrAddCategory" xml:space="preserve">
+    <value>カテゴリーを選択または追加</value>
+  </data>
+  <data name="AddPicture.SelectOrAddLense" xml:space="preserve">
+    <value>レンズを選択または追加</value>
+  </data>
+  <data name="AddPicture.SelectOrAddTag" xml:space="preserve">
+    <value>タグを選択または追加</value>
+  </data>
+  <data name="AddPicture.SelectPerson" xml:space="preserve">
+    <value>人物を選択</value>
+  </data>
+  <data name="AddPicture.SelectPlace" xml:space="preserve">
+    <value>場所を選択</value>
+  </data>
+  <data name="AddPicture.Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="AddPicture.Title" xml:space="preserve">
+    <value>タイトル</value>
+  </data>
+  <data name="AddPictureSettingsDialog.AddPictureSettings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="AddPictureSettingsDialog.Apply" xml:space="preserve">
+    <value>設定する</value>
+  </data>
+  <data name="AddPictureSettingsDialog.KeepCategory" xml:space="preserve">
+    <value>カテゴリーを記憶する</value>
+  </data>
+  <data name="AddPictureSettingsDialog.KeepLocation" xml:space="preserve">
+    <value>場所を記憶する</value>
+  </data>
+  <data name="AddPictureSettingsDialog.KeepPeople" xml:space="preserve">
+    <value>人物を記憶する</value>
+  </data>
+  <data name="AddPictureSettingsDialog.KeepTags" xml:space="preserve">
+    <value>タグを記憶する</value>
+  </data>
+  <data name="AppSettings.DatabaseImportExport" xml:space="preserve">
+    <value>データベースにインポート/エクスポート</value>
+  </data>
+  <data name="AppSettings.FolderSettings" xml:space="preserve">
+    <value>フォルダ設定</value>
+  </data>
+  <data name="CollectionsDetail.BackToCollections" xml:space="preserve">
+    <value>アルバムに戻る</value>
+  </data>
+  <data name="CollectionsDetail.ExportToFolder" xml:space="preserve">
+    <value>フォルダにエクスポートする</value>
+  </data>
+  <data name="CollectionsDetail.PictuersPerPage" xml:space="preserve">
+    <value>ページごとの写真数</value>
+  </data>
+  <data name="DatabaseImportExport.Export" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+  <data name="DatabaseImportExport.Import" xml:space="preserve">
+    <value>インポート</value>
+  </data>
+  <data name="DetailEdit.AddTag" xml:space="preserve">
+    <value>タグを追加</value>
+  </data>
+  <data name="DetailEdit.SelectCamera" xml:space="preserve">
+    <value>カメラを選択</value>
+  </data>
+  <data name="DetailEdit.SelectCategory" xml:space="preserve">
+    <value>カテゴリーを選択</value>
+  </data>
+  <data name="DetailEdit.SelectLense" xml:space="preserve">
+    <value>レンズを選択</value>
+  </data>
+  <data name="DetailEdit.SelectTag" xml:space="preserve">
+    <value>タグを選択</value>
+  </data>
+  <data name="EditCamerasData.Header" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="EditCategoriesData.Header" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="EditData.EditCameras" xml:space="preserve">
+    <value>カメラを編集</value>
+  </data>
+  <data name="EditData.EditCategories" xml:space="preserve">
+    <value>カテゴリーを編集</value>
+  </data>
+  <data name="EditData.EditLenses" xml:space="preserve">
+    <value>レンズを編集</value>
+  </data>
+  <data name="EditData.EditLocations" xml:space="preserve">
+    <value>場所を編集</value>
+  </data>
+  <data name="EditData.EditPeople" xml:space="preserve">
+    <value>人物を編集</value>
+  </data>
+  <data name="EditData.EditTags" xml:space="preserve">
+    <value>タグを編集</value>
+  </data>
+  <data name="EditLensesData.Header" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="EditLocationData.HeaderCountry" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="EditLocationData.HeaderLocation" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="EditPeopleData.HeaderFirstName" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="EditPeopleData.HeaderLastName" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="EditLocationData.HeaderLatitude" xml:space="preserve">
+    <value>緯度</value>
+  </data>
+  <data name="EditLocationData.HeaderLongitude" xml:space="preserve">
+    <value>経度</value>
+  </data>
+  <data name="EditTagsData.Header" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="FolderSettings.SelectBackupFolder" xml:space="preserve">
+    <value>バックアップフォルダを選択</value>
+  </data>
+  <data name="FolderSettings.SelectMainFolder" xml:space="preserve">
+    <value>メインフォルダを選択</value>
+  </data>
+  <data name="GeocodingDialog.Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="GeocodingDialog.Latitude" xml:space="preserve">
+    <value>緯度</value>
+  </data>
+  <data name="GeocodingDialog.Longitude" xml:space="preserve">
+    <value>経度</value>
+  </data>
+  <data name="GeocodingDialog.SaveCoordinates" xml:space="preserve">
+    <value>座標を保存</value>
+  </data>
+  <data name="PictureDetail.GoBack" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="PictureDetail.ToggleEdit" xml:space="preserve">
+    <value>データを編集</value>
+  </data>
+  <data name="SearchParamater.SelectPlace" xml:space="preserve">
+    <value>場所を選択</value>
+  </data>
+  <data name="SearchParameter.AddPerson" xml:space="preserve">
+    <value>人物を追加</value>
+  </data>
+  <data name="SearchParameter.AddTag" xml:space="preserve">
+    <value>タグを追加</value>
+  </data>
+  <data name="SearchParameter.CreatedDateFrom" xml:space="preserve">
+    <value>撮影日</value>
+  </data>
+  <data name="SearchParameter.PictureTitle" xml:space="preserve">
+    <value>写真のタイトル</value>
+  </data>
+  <data name="SearchParameter.SelectCamera" xml:space="preserve">
+    <value>カメラを選択</value>
+  </data>
+  <data name="SearchParameter.SelectCategory" xml:space="preserve">
+    <value>カテゴリーを選択</value>
+  </data>
+  <data name="SearchParameter.SelectCountry" xml:space="preserve">
+    <value>国を選択</value>
+  </data>
+  <data name="SearchParameter.SelectLense" xml:space="preserve">
+    <value>レンズを選択</value>
+  </data>
+  <data name="SearchParameter.SelectPerson" xml:space="preserve">
+    <value>人物を選択</value>
+  </data>
+  <data name="SearchParameter.SelectTag" xml:space="preserve">
+    <value>タグを選択</value>
+  </data>
+  <data name="SearchResult.AddToCollection" xml:space="preserve">
+    <value>コレクションへ追加</value>
+  </data>
+  <data name="SearchResult.ExportToFolder" xml:space="preserve">
+    <value>フォルダへエクスポート</value>
+  </data>
+  <data name="SearchResult.PicturesPerPage" xml:space="preserve">
+    <value>ページごとの写真数</value>
+  </data>
+  <data name="SearchResult.SelectCollection" xml:space="preserve">
+    <value>コレクションを選択</value>
+  </data>
+  <data name="SearchParameter.SearchParameters" xml:space="preserve">
+    <value>パラメータを検索</value>
+  </data>
+  <data name="SearchParameter.CreatedDateTo" xml:space="preserve">
+    <value>撮影日</value>
+  </data>
+  <data name="SearchParameter.CreatedTimeFrom" xml:space="preserve">
+    <value>撮影された時間</value>
+  </data>
+  <data name="SearchParameter.CreatedTimeTo" xml:space="preserve">
+    <value>撮影された時間</value>
+  </data>
+  <data name="FolderSettings.Info" xml:space="preserve">
+    <value>Photizerを使用する前に、画像を保存するメインフォルダーとバックアップフォルダーを選択する必要があります。 Photizerに画像を追加すると、メインフォルダーに1つのファイルが作成され、バックアップフォルダーにコピーが作成されます</value>
+  </data>
+  <data name="DatabaseImportExport.InfoTwo" xml:space="preserve">
+    <value>「エクスポート」は、バックアップフォルダーにデータベースを手動でコピーします。</value>
+  </data>
+  <data name="DatabaseImportExport.InfoThree" xml:space="preserve">
+    <value>現在のデータベースをバックアップに置き換えるには、まずPhotizerアプリを閉じる必要があります。
+次に、データベースファイルをバックアップフォルダーから「Photizer」フォルダーにコピーし、「Photizer.db」ファイルを置き換えます。
+「インポート」ボタンは両方のフォルダを開きます。</value>
+  </data>
+  <data name="DatabaseImportExport.InfoOne" xml:space="preserve">
+    <value>Photizerのデータは、PhotizerのAppDataフォルダーの「Photizer.db」というデータベースファイルに保存されます。
+    CurrentUser / AppData / Local / PhotizerData
+アプリケーションを閉じるたびに、Photizerは自動的に/ DatabaseBackupフォルダーにバックアップを作成します。</value>
+  </data>
+  <data name="AddNewLocationDialog.Info" xml:space="preserve">
+    <value>経度と緯度は後で設定メニューで設定する必要があります</value>
+  </data>
+  <data name="AddNewCameraDialog.Camera" xml:space="preserve">
+    <value>カメラ</value>
+  </data>
+  <data name="AddNewCategoryDialog.Category" xml:space="preserve">
+    <value>カテゴリー</value>
+  </data>
+  <data name="AddNewLenseDialog.Lense" xml:space="preserve">
+    <value>レンズ</value>
+  </data>
+  <data name="AddNewTagDialog.Tag" xml:space="preserve">
+    <value>タグ</value>
+  </data>
+  <data name="AddNewCameraDialog.CameraIsEmpty" xml:space="preserve">
+    <value>カメラが空白です</value>
+  </data>
+  <data name="AddNewCategoryDialog.CategoryIsEmpty" xml:space="preserve">
+    <value>カテゴリーが空白です</value>
+  </data>
+  <data name="AddNewCollectionDialog.CollectionNameIsEmpty" xml:space="preserve">
+    <value>アルバム名が空白です</value>
+  </data>
+  <data name="AddNewLenseDialog.LenseIsEmpty" xml:space="preserve">
+    <value>レンズが空白です</value>
+  </data>
+  <data name="AddNewLocationDialog.CountryIsEmpty" xml:space="preserve">
+    <value>国が空白です</value>
+  </data>
+  <data name="AddNewLocationDialog.PlaceIsEmpty" xml:space="preserve">
+    <value>場所が空白です</value>
+  </data>
+  <data name="AddNewPersonDialog.FirstnameIsEmpty" xml:space="preserve">
+    <value>名が空白です</value>
+  </data>
+  <data name="AddNewPersonDialog.LastnameIsEmpty" xml:space="preserve">
+    <value>姓が空白です</value>
+  </data>
+  <data name="AddNewTagDialog.TagIsEmpty" xml:space="preserve">
+    <value>タグが空白です</value>
+  </data>
+  <data name="AddNewCameraDialog.NewCameraAdded" xml:space="preserve">
+    <value>新しくカメラが追加されました</value>
+  </data>
+  <data name="AddNewCategoryDialog.NewCategoryAdded" xml:space="preserve">
+    <value>新しくカテゴリーが追加されました</value>
+  </data>
+  <data name="AddNewCollectionDialog.NewCollectionAdded" xml:space="preserve">
+    <value>新しくアルバが追加されました</value>
+  </data>
+  <data name="AddNewLenseDialog.NewLenseAdded" xml:space="preserve">
+    <value>新しくレンズが追加されました</value>
+  </data>
+  <data name="AddNewLocationDialog.NewLocationAdded" xml:space="preserve">
+    <value>新しく場所が追加されました</value>
+  </data>
+  <data name="AddNewPersonDialog.NewPersonAdded" xml:space="preserve">
+    <value>新しく人物が追加されました</value>
+  </data>
+  <data name="AddNewTagDialog.NewTagAdded" xml:space="preserve">
+    <value>新しくタグが追加されました</value>
+  </data>
+  <data name="DetailEdit.Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="GeocodingDialog.Error" xml:space="preserve">
+    <value>場所が見つからないか、インターネット接続が利用できません</value>
+  </data>
+  <data name="GeocodingDialog.UpdatedCoordinates" xml:space="preserve">
+    <value>座標が更新されました</value>
+  </data>
+  <data name="PhotizerUpdateNotification" xml:space="preserve">
+    <value>新しいバージョンが使用可能になりました。今アップデートしますか？</value>
+  </data>
+  <data name="PhotizerUpdaterError" xml:space="preserve">
+    <value>アップデータの起動中にエラーが発生しました。</value>
+  </data>
+  <data name="PhotizerUpdaterNotFound" xml:space="preserve">
+    <value>アップデートは利用可能ですが、Photizer.Updater.exeが見つかりません！</value>
+  </data>
+  <data name="ResultSortCategory.CreatedDateAscending" xml:space="preserve">
+    <value>作成日昇順</value>
+  </data>
+  <data name="ResultSortCategory.CreatedDateDescending" xml:space="preserve">
+    <value>作成日降順</value>
+  </data>
+  <data name="ResultSortCategory.PhotizerAddedAscending" xml:space="preserve">
+    <value>追加された日付の昇順</value>
+  </data>
+  <data name="ResultSortCategory.PhotizerAddedDescending" xml:space="preserve">
+    <value>追加された日付の降順</value>
+  </data>
+  <data name="ResultSortCategory.RatingAscending" xml:space="preserve">
+    <value>評価の昇順</value>
+  </data>
+  <data name="ResultSortCategory.RatingDescending" xml:space="preserve">
+    <value>評価の降順</value>
+  </data>
+  <data name="SearchResult.SortResultBy" xml:space="preserve">
+    <value>結果を並べ替える</value>
+  </data>
+</root>

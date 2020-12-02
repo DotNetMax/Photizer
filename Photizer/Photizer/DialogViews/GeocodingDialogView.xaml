@@ -1,0 +1,198 @@
+﻿<UserControl x:Class="Photizer.DialogViews.GeocodingDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Photizer.DialogViews"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:converters="clr-namespace:Photizer.Converters"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:map="clr-namespace:MapControl;assembly=MapControl.WPF"
+             mc:Ignorable="d"
+             xmlns:resx="clr-namespace:Photizer"
+             Background="{StaticResource MaterialDesignPaper}"
+             MinHeight="400"
+             MinWidth="800"
+             Height="auto"
+             Width="auto">
+    <UserControl.Resources>
+        <converters:LocationToVisibilityConverter x:Key="LocationToVisibilityConverter"></converters:LocationToVisibilityConverter>
+
+        <Style x:Key="PushpinItemStyle"
+               TargetType="map:MapItem">
+            <Setter Property="map:MapPanel.Location"
+                    Value="{Binding PinLocation}" />
+            <Setter Property="VerticalAlignment"
+                    Value="Bottom">
+            </Setter>
+            <Setter Property="Visibility">
+                <Setter.Value>
+                    <MultiBinding Converter="{StaticResource LocationToVisibilityConverter}">
+                        <Binding Path="(map:MapPanel.ParentMap)"
+                                 RelativeSource="{RelativeSource Self}" />
+                        <Binding Path="(map:MapPanel.ViewPosition)"
+                                 RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="map:MapItem">
+                        <map:Pushpin Background="{StaticResource MaterialDesignPaper}">
+                            <materialDesign:ColorZone Height="20"
+                                                      Width="20"
+                                                      Background="{StaticResource MaterialDesignPaper}">
+                            </materialDesign:ColorZone>
+                        </map:Pushpin>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"
+              Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.8*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Grid.Row="0"
+                       Margin="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="{Binding Location.Country}"
+                       Foreground="{StaticResource MaterialDesignBody}">
+            </TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                       Grid.Row="1"
+                       Margin="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="{Binding Location.Place}"
+                       Foreground="{StaticResource MaterialDesignBody}">
+            </TextBlock>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                           Foreground="{StaticResource MaterialDesignBody}"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Margin="20"
+                           Text="{x:Static resx:Multilang.GeocodingDialog_Latitude}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                           Foreground="{StaticResource MaterialDesignBody}"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="20"
+                           Text="{x:Static resx:Multilang.GeocodingDialog_Longitude}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center">
+                </TextBlock>
+
+                <Button Style="{StaticResource MaterialDesignIconButton}"
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Margin="10"
+                        cal:Message.Attach="[Event Click] = [Action Geocode()]"
+                        ToolTip="MaterialDesignIconButton">
+                    <materialDesign:PackIcon Kind="MapSearch" />
+                </Button>
+
+                <TextBox materialDesign:HintAssist.Hint="{x:Static resx:Multilang.GeocodingDialog_Latitude}"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         Margin="20"
+                         Text="{Binding Location.Latitude}"
+                         Foreground="{StaticResource MaterialDesignBody}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         cal:Message.Attach="[Event KeyDown] = [Action UpdateCoords($executionContext)]"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center">
+                </TextBox>
+
+                <TextBox materialDesign:HintAssist.Hint="{x:Static resx:Multilang.GeocodingDialog_Longitude}"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Margin="20"
+                         Text="{Binding Location.Longitude}"
+                         Foreground="{StaticResource MaterialDesignBody}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         cal:Message.Attach="[Event KeyDown] = [Action UpdateCoords($executionContext)]"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center" />
+            </Grid>
+
+            <Grid HorizontalAlignment="Center"
+                  Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button IsDefault="True"
+                        Grid.Column="0"
+                        Margin="10"
+                        Content="{x:Static resx:Multilang.GeocodingDialog_SaveCoordinates}"
+                        HorizontalAlignment="Center"
+                        cal:Message.Attach="[Event Click] = [Action SaveCoordinates]"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                    <Button.CommandParameter>
+                        <system:Boolean>True</system:Boolean>
+                    </Button.CommandParameter>
+                </Button>
+                <Button IsCancel="True"
+                        Grid.Column="1"
+                        Margin="10"
+                        Content="{x:Static resx:Multilang.GeocodingDialog_Close}"
+                        HorizontalAlignment="Center"
+                        Style="{DynamicResource MaterialDesignFlatButton}"
+                        Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                    <Button.CommandParameter>
+                        <system:Boolean>False</system:Boolean>
+                    </Button.CommandParameter>
+                </Button>
+            </Grid>
+        </Grid>
+        <map:Map x:Name="Map"
+                 Width="600"
+                 Height="500"
+                 ZoomLevel="11"
+                 Margin="10"
+                 Grid.Column="1"
+                 MaxZoomLevel="21"
+                 Center="{Binding MapCenter}"
+                 MapLayer="{Binding MapLayer}">
+            <map:MapItemsControl ItemsSource="{Binding Pins}"
+                                 ItemContainerStyle="{StaticResource PushpinItemStyle}" />
+        </map:Map>
+        <materialDesign:Snackbar HorizontalAlignment="Center"
+                                 Grid.ColumnSpan="2"
+                                 VerticalAlignment="Bottom"
+                                 MessageQueue="{Binding MessageQueue}">
+        </materialDesign:Snackbar>
+    </Grid>
+</UserControl>

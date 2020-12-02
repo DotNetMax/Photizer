@@ -1,0 +1,35 @@
+﻿<Application x:Class="Photizer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Photizer">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:Bootstrapper x:Key="bootstrapper"></local:Bootstrapper>
+                </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- primary -->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush"
+                             Color="#97cccc" />
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush"
+                             Color="#FFFFFF" />
+            <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                             Color="#679b9b" />
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush"
+                             Color="#FFFFFF" />
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush"
+                             Color="#396d6d" />
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush"
+                             Color="#FFFFFF" />
+            <!-- accent -->
+            <SolidColorBrush x:Key="SecondaryAccentBrush"
+                             Color="#b8cec0" />
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush"
+                             Color="#FFFFFF" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
