@@ -43,7 +43,7 @@
                                          Width="{Binding Converter={StaticResource SizePercentageConverter}
                                             , ElementName=Pictures
                                             , Path=ActualWidth
-                                            , ConverterParameter=0.316}"
+                                            , ConverterParameter=0.31}"
                                          Margin="10"
                                          x:Name="ImageCard">
                         <Grid>
