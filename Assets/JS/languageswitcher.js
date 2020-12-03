@@ -25,7 +25,7 @@ function setToGermanLanguage()
     $('#heroHeading').text('Photos verwalten mit Photizer');
     $('#heroParagraphOne').text('Du möchtest deine Bilder gesammelt an einem Ort auf deinem Computer verwalten, ohne eine aufwändige Ordnerstruktur erstellen zu müssen?');
     $('#heroParagraphTwo').html('Mit Photizer ist es möglich Bildern beim Hinzufügen zur Verwaltung mit Kategorien, Tags, Orten und mehr zu versehen, '
-        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features. Details werden in diesem <a href="https://youtu.be/-VcF9gOBcnM">YouTube Video</a> erklärt');
+        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features. Details werden in diesem <a href="https://youtu.be/DJXloATnRAM">YouTube Video</a> erklärt');
     
     $('#featureAddPhotosTitle').text('Photos Hinzufügen');
     $('#featureAddPhotosContent').text('Füge dein Bilder zu Photizer hinzu und gebe dabei so viele Information wie möglich an, um es mit der Suchfunktion einfacher zu finden. '
@@ -71,7 +71,7 @@ function setToJapaneseLanguage()
     $('#heroHeading').text('Photizerで写真を整理する');
     $('#heroParagraphOne').text('コンピュータ上の写真を1か所で簡単に管理したいですか？');
     $('#heroParagraphTwo').html('Photizer(フォータイザー)を利用すると、カテゴリ、タグ、場所などを使って写真を追加し、後で簡単に見つけることができます。 '
-        + '詳細な概要については、機能のセクションを確認するか、<a href="https://youtu.be/-VcF9gOBcnM">YouTubeビデオ</a>をご覧ください');
+        + '詳細な概要については、機能のセクションを確認するか、<a href="https://youtu.be/DJXloATnRAM">YouTubeビデオ</a>をご覧ください');
     
     $('#featureAddPhotosTitle').text('写真を追加');
     $('#featureAddPhotosContent').text('いくつかのキーワードと一緒に写真をPhotizerに追加すれば検索機能を使って簡単に写真を見つけることができます。'
@@ -112,7 +112,7 @@ function setToEnglishLanguage()
     $('#heroHeading').text('Organize your photos with Photizer');
     $('#heroParagraphOne').text('You want to manage your photos on your computer in one place without having to create a complicated folder structure?');
     $('#heroParagraphTwo').html('Photizer allows you to add your photos with categories, tags, locations etc. to easily find them later. '
-        + 'Check the <a href="#">features</a> section or watch the <a href="https://youtu.be/-VcF9gOBcnM">YouTube Video</a> for a detailed overview');
+        + 'Check the <a href="#">features</a> section or watch the <a href="https://youtu.be/DJXloATnRAM">YouTube Video</a> for a detailed overview');
     
     $('#featureAddPhotosTitle').text('Add Photos');
     $('#featureAddPhotosContent').text('Add your photos to Photizer with many keywords to easily find them when you are searching. '

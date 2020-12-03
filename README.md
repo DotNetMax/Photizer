@@ -7,7 +7,7 @@
 
 Photizer is a tool for organizing photos on a PC. Photizer allows you to add your photos with categories, tags, locations etc. to easily find them later.
 
-Check the <a href="https://youtu.be/-VcF9gOBcnM">YouTube Video</a> for a detailed overview
+Check the <a href="https://youtu.be/DJXloATnRAM">YouTube Video</a> for a detailed overview
 
 <br>
 
