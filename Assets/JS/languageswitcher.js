@@ -25,8 +25,9 @@ function setToGermanLanguage()
     $('#heroHeading').text('Photos verwalten mit Photizer');
     $('#heroParagraphOne').text('Du möchtest deine Bilder gesammelt an einem Ort auf deinem Computer verwalten, ohne eine aufwändige Ordnerstruktur erstellen zu müssen?');
     $('#heroParagraphTwo').html('Mit Photizer ist es möglich Bildern beim Hinzufügen zur Verwaltung mit Kategorien, Tags, Orten und mehr zu versehen, '
-        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features. Details werden in diesem <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> erklärt');
-    
+        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features.');
+    $('#heroParagraphThree').html('Details werden in diesem <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> erklärt');
+
     $('#featureAddPhotosTitle').text('Photos Hinzufügen');
     $('#featureAddPhotosContent').text('Füge dein Bilder zu Photizer hinzu und gebe dabei so viele Information wie möglich an, um es mit der Suchfunktion einfacher zu finden. '
         + 'Einige der Information werden bereits aus den EXIF Daten des Bildes geladen, wie zum Beispiel die Kamera, Objektiv und die Aufnahmeeinstellungen.');
@@ -54,7 +55,7 @@ function setToGermanLanguage()
 
     $('#downloadTitle').text('Download Photizer');
     $('#downloadParagraphOne').text('Photizer ist kostenlos und Open Source! Die aktuelle Version kann von der GitHub Release Seite (Download Button) herunterladen werden.');
-    $('#downloadParagraphTwo').html('Du hast einen Fehler gefunden oder eine Idee für ein weiteres Features für Photizer? Lege Deine Anforderung bei <a href="#">GitHub</a> als "Issue" an. Jegliches Feedback um Photizer weiter zu verbessern ist erwünscht!');
+    $('#downloadParagraphTwo').html('Du hast einen Fehler gefunden oder eine Idee für ein weiteres Features für Photizer? Lege Deine Anforderung bei <a href="https://github.com/DotNetMax/Photizer/issues" target="_blank">GitHub</a> als "Issue" an. Jegliches Feedback um Photizer weiter zu verbessern ist erwünscht!');
 
     $('#supportTile').text('Photizer unterstützen');
     $('#supportContent').text('Photizer wird immer kostenlos und Open Source bleiben. Wenn Dir Photizer gefällt und Du die Entwicklung unterstützen möchtest, würde ich mich sehr über eine Spende freuen!');
@@ -70,9 +71,9 @@ function setToJapaneseLanguage()
 
     $('#heroHeading').text('Photizerで写真を整理する');
     $('#heroParagraphOne').text('コンピュータ上の写真を1か所で簡単に管理したいですか？');
-    $('#heroParagraphTwo').html('Photizer(フォータイザー)を利用すると、カテゴリ、タグ、場所などを使って写真を追加し、後で簡単に見つけることができます。 '
-        + '詳細な概要については、機能のセクションを確認するか、<a href="https://youtu.be/DJXloATnRAM">YouTubeビデオ</a>をご覧ください');
-    
+    $('#heroParagraphTwo').html('Photizer(フォータイザー)を利用すると、カテゴリ、タグ、場所などを使って写真を追加し、後で簡単に見つけることができます。');
+    $('#heroParagraphThree').html('詳細な概要については、機能のセクションを確認するか、<a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTubeビデオ</a>をご覧ください');
+
     $('#featureAddPhotosTitle').text('写真を追加');
     $('#featureAddPhotosContent').text('いくつかのキーワードと一緒に写真をPhotizerに追加すれば検索機能を使って簡単に写真を見つけることができます。'
         + 'カメラ、レンズ、キャプチャ設定など、一部の情報はEXIFデータから読み込まれます');
@@ -95,7 +96,7 @@ function setToJapaneseLanguage()
 
     $('#downloadTitle').text('Photizerをダウンロードする');
     $('#downloadParagraphOne').text('Photizerは無料でオープンソースです！ ダウンロードボタンをクリックすると、GitHubリリースページから現在のリリースをダウンロードできます。');
-    $('#downloadParagraphTwo').html('不具合を見つけたり、Photizerの追加機能のアイデアなどがある場合は、<a href="#">GitHub</a>で「Issue」としてリクエストを開きます。 Photizerを改善するためのフィードバックは大歓迎です！');
+    $('#downloadParagraphTwo').html('不具合を見つけたり、Photizerの追加機能のアイデアなどがある場合は、<a href="https://github.com/DotNetMax/Photizer/issues" target="_blank">GitHub</a>で「Issue」としてリクエストを開きます。 Photizerを改善するためのフィードバックは大歓迎です！');
 
     $('#supportTile').text('Photizer開発をサポートする');
     $('#supportContent').text('Photizerは常に無料で使えるオープンソースです。開発をサポートしたい場合は、寄付をいただければ幸いです。');
@@ -111,9 +112,9 @@ function setToEnglishLanguage()
     
     $('#heroHeading').text('Organize your photos with Photizer');
     $('#heroParagraphOne').text('You want to manage your photos on your computer in one place without having to create a complicated folder structure?');
-    $('#heroParagraphTwo').html('Photizer allows you to add your photos with categories, tags, locations etc. to easily find them later. '
-        + 'Check the <a href="#">features</a> section or watch the <a href="https://youtu.be/DJXloATnRAM">YouTube Video</a> for a detailed overview');
-    
+    $('#heroParagraphTwo').html('Photizer allows you to add your photos with categories, tags, locations etc. to easily find them later.');
+    $('#heroParagraphThree').html('Check the <a href="#">features</a> section or watch the <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> for a detailed overview');
+
     $('#featureAddPhotosTitle').text('Add Photos');
     $('#featureAddPhotosContent').text('Add your photos to Photizer with many keywords to easily find them when you are searching. '
         + 'Some information will be preloaded from the EXIF Data like Camera, Lens and the capture settings.');
@@ -137,7 +138,7 @@ function setToEnglishLanguage()
 
     $('#downloadTitle').text('Download Photizer');
     $('#downloadParagraphOne').text('Photizer is free and Open Source! You can download the current release from the GitHub Release Page by clicking on the download button.');
-    $('#downloadParagraphTwo').html('You found a bug or have an idea for an additional feature for Photizer? Then open your request as an "issue" on <a href="#">GitHub</a>. Any feedback to improve Photizer is welcome!');
+    $('#downloadParagraphTwo').html('You found a bug or have an idea for an additional feature for Photizer? Then open your request as an "issue" on <a href="https://github.com/DotNetMax/Photizer/issues" target="_blank">GitHub</a>. Any feedback to improve Photizer is welcome!');
 
 
     $('#supportTile').text('Support the Photizer Development');
