@@ -25,7 +25,7 @@ function setToGermanLanguage()
     $('#heroHeading').text('Photos verwalten mit Photizer');
     $('#heroParagraphOne').text('Du möchtest deine Bilder gesammelt an einem Ort auf deinem Computer verwalten, ohne eine aufwändige Ordnerstruktur erstellen zu müssen?');
     $('#heroParagraphTwo').html('Mit Photizer ist es möglich Bildern beim Hinzufügen zur Verwaltung mit Kategorien, Tags, Orten und mehr zu versehen, '
-        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features. Details werden in diesem <a href="https://youtu.be/DJXloATnRAM">YouTube Video</a> erklärt');
+        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features. Details werden in diesem <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> erklärt');
     
     $('#featureAddPhotosTitle').text('Photos Hinzufügen');
     $('#featureAddPhotosContent').text('Füge dein Bilder zu Photizer hinzu und gebe dabei so viele Information wie möglich an, um es mit der Suchfunktion einfacher zu finden. '

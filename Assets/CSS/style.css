@@ -105,6 +105,8 @@ h2.section-title-heading {
     background-repeat: no-repeat;
     padding-top: 12rem;
     padding-bottom: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     position: relative;
 }
 
@@ -119,6 +121,10 @@ h2.section-title-heading {
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+.hero-buttons {
+    padding-bottom: 1rem;
 }
 
 .main-hero-content h1 {
@@ -142,7 +148,7 @@ h2.section-title-heading {
 
 .image-box img {
     position: absolute;
-    top: 75%;  
+    top: 80%;  
     left: 40%;
     right: 10%;
     z-index: 1;
