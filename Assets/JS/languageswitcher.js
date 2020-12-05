@@ -25,7 +25,7 @@ function setToGermanLanguage()
     $('#heroHeading').text('Photos verwalten mit Photizer');
     $('#heroParagraphOne').text('Du möchtest deine Bilder gesammelt an einem Ort auf deinem Computer verwalten, ohne eine aufwändige Ordnerstruktur erstellen zu müssen?');
     $('#heroParagraphTwo').html('Mit Photizer ist es möglich Bildern beim Hinzufügen zur Verwaltung mit Kategorien, Tags, Orten und mehr zu versehen, '
-        + 'um diese später leicht wieder zu finden. <a href="#">Hier</a> gibt es einen kleinen Überlick über die Features.');
+        + 'um diese später leicht wieder zu finden. <a href="#Features">Hier</a> gibt es einen kleinen Überlick über die Features.');
     $('#heroParagraphThree').html('Details werden in diesem <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> erklärt');
 
     $('#featureAddPhotosTitle').text('Photos Hinzufügen');
@@ -113,7 +113,7 @@ function setToEnglishLanguage()
     $('#heroHeading').text('Organize your photos with Photizer');
     $('#heroParagraphOne').text('You want to manage your photos on your computer in one place without having to create a complicated folder structure?');
     $('#heroParagraphTwo').html('Photizer allows you to add your photos with categories, tags, locations etc. to easily find them later.');
-    $('#heroParagraphThree').html('Check the <a href="#">features</a> section or watch the <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> for a detailed overview');
+    $('#heroParagraphThree').html('Check the <a href="#Features">features</a> section or watch the <a href="https://youtu.be/DJXloATnRAM" target="_blank">YouTube Video</a> for a detailed overview');
 
     $('#featureAddPhotosTitle').text('Add Photos');
     $('#featureAddPhotosContent').text('Add your photos to Photizer with many keywords to easily find them when you are searching. '
